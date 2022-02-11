@@ -9,30 +9,92 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <div class="main">
-            <h1 class="headings">Jon Clinard <br> Columbus-Based Software Developer</h1>
-            <button class="btn">Click here to check out my resume!</button>
+            <h1 class="headings">Jon Clinard <br> Software Developer</h1>
+            <button class="btn"> <a href="https://docs.google.com/document/d/1QUzbKQJKhcowgVl1NiynTY66SIBbgq40w3Uge4-Fmbw/edit?usp=sharing">Click here to check out my resume!</a> </button>
 
         </div>
     </section>
 
     <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
         <div id="pic">
-            <h1 class="headings">ABOUT ME</h1>
-            <img src="img3.jpg" alt="">
+            <img src="abme.png" alt="">
             <div id="intro">
                 <h2>JON CLINARD</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga omnis in soluta numquam reiciendis doloribus facilis tenetur et, nihil error, voluptates molestiae tempore quo maxime itaque dolores consequuntur, magni assumenda.</p>
+                <p>Thanks for checking out my page! My name is Jon, and I'm a software development student located in Columbus, Ohio. <br>
+
+                    I am currently working through a Full-Time coding bootcamp offered by We Can Code It. <br>
+                    
+                    Some of the languages and technologies I have learned include: <br> 
+                    
+                    - Java <br> 
+                    - HTML <br>
+                    - CSS <br>
+                    - Javascript <br> 
+                    - OOP <br> 
+                    - APIs <br> 
+                    - REST <br>
+
+                    When I'm not studying, I love to spend my freetime playing video games, getting a run or lift in and occasionally touching some grass. <br>
+
+                   
+                   
+            
+
+                </p>
             </div>
         </div>
     </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            
+            <article>  
+                <a href="https://github.com/2022-Spring-Cohort/virtual-pet-clinardjw">
+                <img src="Portfolio/img1.png" alt="">
+                </a>
+            </article>
+            
+            <article>  
+                <a href="https://github.com/2022-Spring-Cohort/fizzbuzzqix2-clinardjw">
+                <img src="Portfolio/img2.png" alt="">
+                </a>
+            </article>
+
+            <article>  
+                <a href="https://github.com/2022-Spring-Cohort/guessing-game-clinardjw">
+                <img src="Portfolio/img3.png" alt="">
+                </a>
+            </article>
+            
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+
+        <input type="text" name="name" class="input" placeholder="Enter Your Name">
+        <input type="email" name="email" class="input" placeholder="Enter Your Email">
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+        <input type="submit" name="SEND" id="send">
+
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/jonathan-clinard"> <img src="linkedin.png" height="50px" width="50px" > </a>
+            <a href="https://github.com/clinardjw"> <img src="GitHub-Emblem.png" height="50px" width="50px"> </a>
+        </div>
+    </footer>
 </body>
 </html>
