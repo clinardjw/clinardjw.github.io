@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Jon Clinard's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +12,28 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+            <li id="contactModal"><h3>Contact Me</h3></li>
         </ul>
     </nav>
+
+<div class="modal" id ="modal">
+    <div class="modalContent">
+        <div class="xHolder">
+            <h2 class="sectionHeader">Contact</h2>
+            <h2 id="modalClose" class="closeX">x</h2>
+            </div>
+            <div class ="aboutBody">
+                <a href="mailto: jwclinard@gmail.com" target="_blank" class="contactemail">
+                    Email: jwclinard@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/jonathan-clinard/" target="blank" class="contactLinkedIn">
+                    LinkedIn: www.linkedin.com/in/jonathan-clinard/
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
     <section id="home">
         <div class="main">
@@ -26,84 +45,126 @@
 
     <section id="about">
         <h1 class="headings">ABOUT ME</h1>
-        <div id="pic">
-            <img src="Portfolio/abme.PNG" alt="">
-            <div id="intro">
-                <h2>JON CLINARD</h2>
-                    <p> I'm a software development student located in Columbus, Ohio. <br>
 
-                    I've spent most of my life working in the healthcare industry. During the initial COVID-19 quarantine, I took an online course covering Python that really piqued my interest to see where coding could take me. <br>
+        <div id="infoContainer">
+     
+            <div id="introCard">
+                <h2 id="cardTitle">Jon Clinard</h2>
+             <p>I'm a software development student located in Columbus, Ohio. </p>
+             <p>I've spent most of my life working in the healthcare industry. During the initial COVID-19 quarantine, I took an online course covering Python that really piqued my interest to see where coding could take me. <br>
+                After doing a lot of research, I found We Can Code It, a bootcamp based in Columbus. I am currently working through their Full-Time Java Cohort! </p>
+             <p>When I'm not coding I love to spend my freetime playing video games, getting a run or lift in, or occasionally touching some grass.</p>
+             <p> You can contact me on my social links below.</p>
+                Thanks for checking out my page!
+                </div>
 
-                    After doing a lot of research, I found We Can Code It, a bootcamp based in Columbus. I am currently working through their Full-Time Java Cohort! <br>
-                    
-                    </p>
-                    <p>
-                    Some of the languages and technologies I have learned include: <br> 
-                    
+                <div id="photoCard">
+                    <img src="Portfolio/abme.PNG" alt="">
+                </div>
+
+                <div id="skillsCard"> 
+                    <h2 id =cardTitle>Skills/Technologies</h2>
+                    <p id="skillsContent">
                     Java • Spring • Hibernate • JPA • JavaScript • <br>
                     MVC • HTML • CSS • Flexbox • Grid • TDD •  <br>
                     Agile (Scrum) • Object-Oriented Programming (OOP) • <br>
                     AJAX • JSON • Restful APIs • Responsive Design / Mobile • <br>
                     Structured Query Language (SQL) • Relational Databases • Source Control / Git • <br>
-                    </p>
-    
-
-                    When I'm not studying, I love to spend my freetime playing video games, getting a run or lift in and occasionally touching some grass. <br>
-
-
-                    You can contact me at jwclinard@gmail.com or my social links below.
-
-                    Thanks for checking out my page!
-
-                   
-                   
-            
-
-                
+                    </p></div>
             </div>
-        </div>
     </section>
 
     <section id="portfolio">
-        <h1 class="headings">PORTFOLIO</h1>
-        <div class="gallery">
-            
-            <article>  
-                <a href="https://github.com/2022-Spring-Cohort/virtual-pet-clinardjw">
-                <img src="Portfolio/img1.png" alt="">
-                </a>
-            </article>
-            
-            <article>  
-                <a href="https://github.com/2022-Spring-Cohort/fizzbuzzqix2-clinardjw">
-                <img src="Portfolio/img2.png" alt="">
-                </a>
-            </article>
-
-            <article>  
-                <a href="https://github.com/2022-Spring-Cohort/guessing-game-clinardjw">
-                <img src="Portfolio/img3.PNG" alt="">
-                </a>
-            </article>
-            
+    <div class = "sectionBox">
+        <h3 class = "headings">PORTFOLIO</h3>
+        <div id="instructionHolder">
+            <h5 class="projectInstruction">Click on a card to view my projects on GitHub!</h5>
         </div>
-    </section>
-    <section id="contact">
-        <h1 class="headings">CONTACT</h1>
-        <form action="" class="form">
+        <div class = "cardContainer">
+            <div class = "flipCard">
+                <a href="https://github.com/2022-Spring-Cohort/virtual-pet-clinardjw" target="_blank" class="cardLink">
+                    <div class="flipCardInner">
+                        <div class="flipCardFront">
+                            <h3 class="flipHeader">Virtual Pet</h3>
+                            <img src="Portfolio/img1.png" id="pet" alt="">
+                        </div>
+                        <div class="flipCardBack">
+                            <h3 class="flipHeader">Virtual Pet</h3>
+                            <div class=bulletPoints>
+                                <ul class="card_ul">
+                                    <li class = "flipCardText">A Java-based pet shelter that allows users to create and delete virtual creatures from a digital pet shelter
+                                    </li>
+                                    <li  class = "flipCardText">Using OOP, I created templates for organic and robotic pets of different OOP principles were used to create templates for both robotic and organic pets of different species.
+                                    </li>    
+                                    <li class = "flipCardText">This project has gone through multiple iterations, starting off with a single object(pet), and then added functionality to accommodate multiple pets and species. 
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </a> 
+            </div>
 
-        <input type="text" name="name" class="input" placeholder="Enter Your Name">
-        <input type="email" name="email" class="input" placeholder="Enter Your Email">
-        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
-        <input type="submit" name="SEND" id="send">
+            <div class = "flipCard">
+                <a href="https://github.com/2022-Spring-Cohort/album-songs-api-adagio" target="_blank" class="cardLink">
+                    <div class="flipCardInner">
+                        <div class="flipCardFront">
+                            <h3 class="flipHeader">Adagio Album Collection</h3>
+                            <img src="Portfolio/jukebox.png" id= "card_img" alt="">
+                        </div>
+                        <div class="flipCardBack">
+                            <h3 class="flipHeader">Adagio Album Collection</h3>
+                            <div class=bulletPoints>
+                                <ul class="ul">
+                                    <li class = "flipCardText">An album collection that utilizes Spring MVC, creating a fullstack application using Javascript to display albums and songs, as well as individual ratings. Backend mapping allows the user to add, edit or delete songs or albums from the collection.
+                                     </li>
+                                    <li  class = "flipCardText"> JSON data used to populate a Java backend, enabling management of all stored album and song objects.
+                                    </li>    
+                                    <li class = "flipCardText">The frontend was made with JavaScript with DOM design principles to create a light and
+                                        dynamic single page application.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>   
 
-        </form>
-    </section>
+            <div class = "flipCard">
+                <a href="https://github.com/2022-Spring-Cohort/donut-maker-clinardjw" target="_blank" class="cardLink">
+                    <div class="flipCardInner">
+                        <div class="flipCardFront">
+                            <h3 class="flipHeader">Donut Clicker</h3>
+                            <img src="Portfolio/donut.png" id= "card_img" alt="">
+                        </div>
+                        <div class="flipCardBack">
+                            <h3 class="flipHeader">Donut Clicker</h3>
+                            <div class=bulletPoints>
+                                <ul class="ul">
+                                    <li class = "flipCardText">A cookie clicker-inspired game utilizing Javascript to allow the player to click 
+                                        a button that dynamically increases the score.
+                                        
+                                    </li>
+                                    <li  class = "flipCardText">The game also features the ability to increase the base multiplier of donuts gained per click, as well as 
+                                        Auto-Clickers, which will automatically increase the score on a set interval tracked by the game. These funcionalities are enabled by Event Listeners.
+                                     </li>    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>   
+        </section>
+
+
     <footer class="footer">
         <div class="icons">
             <a href="https://www.linkedin.com/in/jonathan-clinard"> <img src="linkedin.png" height="50px" width="50px" > </a>
             <a href="https://github.com/clinardjw"> <img src="GitHub-Emblem.png" height="50px" width="50px"> </a>
         </div>
     </footer>
+    <script src="/javascript.js"></script>
 </body>
 </html>

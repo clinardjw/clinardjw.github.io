@@ -13,7 +13,7 @@ html{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, .5);
-    position: sticky;
+    position: relative;
     top: 0;
 }
 .navbar ul{
@@ -25,8 +25,22 @@ html{
     font-family: century;
     font-size: 1.1rem;
     font-weight: bold;
+    text-decoration: none;
+    color: white; 
+    padding: 8px 25px;
+    transition: all .5s ease;
 }
+
+.navbar ul li:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white; 
+}
+
 .navbar ul li a{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
     text-decoration: none;
     color: white; 
     padding: 8px 25px;
@@ -38,6 +52,67 @@ html{
     box-shadow: 0 0 10px white;
 }
 
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 30rem;
+    height: 10rem;
+    background-color: #8EA8C3;
+    left: calc(50% - 15rem);
+    margin-top: 15%;
+    border-radius: 25px;
+    border: solid rgba(22, 25, 37, 0.75);
+    animation-name: animateModal;
+    animation-duration: 0.8s;
+}
+
+.modalContent{
+    color: black;
+}
+
+a{
+    color:black;
+}
+
+
+.aboutBody{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.xHolder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeX{
+    margin-right: 1rem;
+    margin-top: .5rem;
+    font-family: 'Poiret One', cursive;
+}
+
+.closeX:hover{
+    color: #406E8E;
+}
+
+.contactLink{
+    text-decoration: none;
+    color:#08090e;
+}
+
+@keyframes animateModal{
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+a:link {
+    text-decoration: none;
+}
 
 #home{
     display:flex;
@@ -47,6 +122,7 @@ html{
     justify-content: center;
     align-items: center;
     color: white;
+    text-decoration: none;
 }
 #home::before{
     content: "";
@@ -68,11 +144,18 @@ html{
 
 
 .headings{
+    text-decoration: none;
     font-family: century;
     font-size: 3rem;
     text-align: center;
     margin: 40px 0px;
+    color: white;
 }
+
+a:visited {
+    color: inherited
+    }
+
 .btn{
     padding: 10px 35px;
     background-color: white;
@@ -97,33 +180,105 @@ html{
     box-sizing: border-box;
     padding: 0px;
 }
+
+#infoContainer{
+    display: flex;
+    flex-direction: row;
+}
 #pic{
     display: flex;
+    flex-direction: column;
 }
-#pic img{
-    width: 200px;
-    height: 400px;
-}
-#intro{
+
+#photoCard{
     display: flex;
     flex-direction: column;
-    text-align: justify;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    position:static;
+    min-width: 15rem;
+    min-height: 25rem;
+    perspective: 100px;
+    border-radius: 25px;
+    margin: 2rem;
 }
-#intro h2{
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+
+#photoCard img{
+    width: 155px;
+    height: 300px;
+}
+
+#introCard{
+    font-family: 'century';
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    position:static;
+    width: 100%;
+    height: 100%;
+
+    min-width: 25rem;
+    min-height: 15rem;
+    perspective: 1000px;
+    border-radius: 25px;
+    margin: 2rem;
+}
+
+#cardTitle{
+    display: flex;
+    justify-content: center;
+}
+
+#skillsCard{
+    font-family: 'century';
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    padding: 10px;
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    position:static;
+    width: 100%;
+    height: 100%;
+
+    min-width: 25rem;
+    min-height: 15rem;
+    perspective: 1000px;
+    border-radius: 25px;
+    margin: 2rem;
+}
+
+#skillsContent{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 
 #portfolio{
-    display: flex;
+      display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .9);
     color: white;
-    align-items: center;
     padding: 20px;
 }
+
+.projectInstruction {
+    font-family: century;
+    text-align: center;
+    margin: 10px 10px;
+
+}
+
+
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -176,7 +331,108 @@ html{
     cursor: pointer;
     box-shadow: 0 0 10px white;
 }
+
+.cardContainer{
+    display: flex;
+    justify-content: space-around;
+    /* overflow-x: scroll; */
+}
+
+.flipCard{
+    background-color: transparent;
+    min-width: 25rem;
+    min-height: 15rem;
+    perspective: 1000px;
+    border-radius: 25px;
+    margin: 2rem;
+    font-family: 'century', sans-serif;
+}
+
+.flipHeader{
+    font-family: 'century', cursive;
+}
+
+.flipCardInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flipCardFront{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0d0f16;
+}
+
+.flipCardBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    color: black;
+    transform: rotateY(180deg);
+    border: 1px solid #0d0f16;
+}
+
+.flipCardText{
+    margin-left: 1.25rem;
+    list-style-type: circle;
+}
+
+.ul{
+    list-style-type: none;
+    border-top:     solid 1px black;
+}
+
+.bulletPoints{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+#pet{
+    height: 13em;
+    width: 18em;
+    padding: 1em;
+}
+
+#card_img{
+    height: 13em;
+    width: 18em;
+    padding: 1em;
+}
+
+.cardLink{
+    text-decoration: none;
+    color: black;
+}
+
+
+
 .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, .5);
     align-items: center;
 }
