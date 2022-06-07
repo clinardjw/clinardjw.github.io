@@ -19,11 +19,11 @@
 <div class="modal" id ="modal">
     <div class="modalContent">
         <div class="xHolder">
-            <h2 class="sectionHeader">Contact</h2>
             <h2 id="modalClose" class="closeX">x</h2>
             </div>
+            <h2 class="sectionHeader">Contact Me:</h2>
             <div class ="aboutBody">
-                <a href="mailto: jwclinard@gmail.com" target="_blank" class="contactemail">
+                <a href="mailto: jwclinard@gmail.com" target="_blank" class="contactEmail">
                     Email: jwclinard@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/jonathan-clinard/" target="blank" class="contactLinkedIn">
@@ -38,7 +38,7 @@
     <section id="home">
         <div class="main">
             <h1 class="headings">Jon Clinard <br> Software Developer</h1>
-            <button class="btn"> <a href="https://docs.google.com/document/d/1QUzbKQJKhcowgVl1NiynTY66SIBbgq40w3Uge4-Fmbw/edit?usp=sharing">Click here to check out my resume!</a> </button>
+            <button class="btn"> <a href="https://docs.google.com/document/d/1Z-g05IU95nUW8d5AvQSijYF__6O2KhQGotfgG2KJ-hw/edit?usp=sharing">Click here to check out my resume!</a> </button>
 
         </div>
     </section>
@@ -54,23 +54,32 @@
 
             <div id="introCard">
                 <h2 id="cardTitle">Jon Clinard</h2>
-             <p>I'm a software development student located in Columbus, Ohio. </p>
-             <p>I've spent most of my life working in the healthcare industry. During the initial COVID-19 quarantine, I took an online course covering Python that really piqued my interest to see where coding could take me. <br>
-                After doing a lot of research, I found We Can Code It, a bootcamp based in Columbus. I am currently working through their Full-Time Java Cohort! </p>
-             <p>When I'm not coding I love to spend my freetime playing video games, getting a run or lift in, or occasionally touching some grass.</p>
-             <p> You can contact me on my social links below.</p>
-                Thanks for checking out my page!
+             <p>
+             I'm a recent Full-Stack Bootcamp Grad located in Columbus, Ohio.</br>
+            </br>
+             I've spent most of my life working in the healthcare industry. During the initial COVID-19 quarantine, I took an online course covering Python that really piqued my interest to see where coding could take me. After doing a lot of research I decided on We Can Code It, a bootcamp based in Columbus.</br>
+            </br>
+             When I'm not coding, I love to spend my freetime playing video games, getting a run or lift in, and occasionally touching some grass.</br>
+            </br>
+            Please contact me via my social links below.
+                Thanks for checking out my page!</p>
                 </div>
 
                
                 <div id="skillsCard"> 
                     <h2 id =cardTitle>Skills/Technologies</h2>
                     <p id="skillsContent">
-                    Java • Spring • Hibernate • JPA • JavaScript • <br>
-                    MVC • HTML • CSS • Flexbox • Grid • TDD •  <br>
-                    Agile (Scrum) • Object-Oriented Programming (OOP) • <br>
-                    AJAX • JSON • Restful APIs • Responsive Design / Mobile • <br>
-                    Structured Query Language (SQL) • Relational Databases • Source Control / Git • <br>
+                        • Java • Spring • Hibernate • JPA • JavaScript  <br>
+                        <br>
+                        • MVC • HTML • CSS • Flexbox • Grid • TDD   <br>
+                    <br>
+                    • Agile (Scrum) • Object-Oriented Programming (OOP)  <br>
+                    <br>
+                    • AJAX • JSON • Restful APIs • Responsive / Mobile Design <br>
+                    <br>
+                    • SQL • Relational Databases • Source Control / Git <br>
+                    <br>
+                    • IntelliJ • Visual Studio Code
                     </p></div>
             </div>
     </section>
@@ -92,12 +101,38 @@
                         <div class="flipCardBack">
                             <h3 class="flipHeader">Virtual Pet</h3>
                             <div class=bulletPoints>
-                                <ul class="card_ul">
-                                    <li class = "flipCardText">A Java-based pet shelter that allows users to create and delete virtual creatures from a digital pet shelter
-                                    </li>
-                                    <li  class = "flipCardText">Using OOP, I created templates for organic and robotic pets of different OOP principles were used to create templates for both robotic and organic pets of different species.
-                                    </li>    
+                                <ul class="ul">
+                                    <li class = "flipCardText">A Java-based pet shelter that allows users to create, interact with, and delete virtual creatures from a digital pet shelter.
+                                    </li><br>
+                                    <li  class = "flipCardText">OOP principles were used to create templates for both robotic and organic pets of different species.
+                                    </li><br>    
                                     <li class = "flipCardText">This project has gone through multiple iterations, starting off with a single object(pet), and then added functionality to accommodate multiple pets and species. 
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <div class = "flipCard">
+                <a href="https://github.com/clinardjw/todoApp" target="_blank" class="cardLink">
+                    <div class="flipCardInner">
+                        <div class="flipCardFront">
+                            <h3 class="flipHeader">To-Do App</h3>
+                            <img src="Portfolio/Todo.PNG" id="pet" alt="">
+                        </div>
+                        <div class="flipCardBack">
+                            <h3 class="flipHeader">To-Do App</h3>
+                            <div class=bulletPoints>
+                                <ul class="ul">
+                                    <li class = "flipCardText">A simple task tracker app. Add an outstanding task to the list, mark them as complete as you go, and remove them. 
+                                    </li><br>
+                                    <li  class = "flipCardText">Using vanilla JavaScript to allow the user to interact with the list, functionality enabled by Event Listeners.
+                                    </li><br>
+                                    <li class = "flipCardText">Basic HTML/CSS was used to structure the web app in a simple, yet clean design. 
                                     </li>
                                 </ul>
                                 
@@ -120,9 +155,9 @@
                             <div class=bulletPoints>
                                 <ul class="ul">
                                     <li class = "flipCardText">An album collection that utilizes Spring MVC, creating a fullstack application using Javascript to display albums and songs, as well as individual ratings. Backend mapping allows the user to add, edit or delete songs or albums from the collection.
-                                     </li>
+                                     </li><br>
                                     <li  class = "flipCardText"> JSON data used to populate a Java backend, enabling management of all stored album and song objects.
-                                    </li>    
+                                    </li> <br>   
                                     <li class = "flipCardText">The frontend was made with JavaScript with DOM design principles to create a light and
                                         dynamic single page application.
                                     </li>
@@ -147,7 +182,7 @@
                                     <li class = "flipCardText">A cookie clicker-inspired game utilizing Javascript to allow the player to click 
                                         a button that dynamically increases the score.
                                         
-                                    </li>
+                                    </li><br>
                                     <li  class = "flipCardText">The game also features the ability to increase the base multiplier of donuts gained per click, as well as 
                                         Auto-Clickers, which will automatically increase the score on a set interval tracked by the game. These funcionalities are enabled by Event Listeners.
                                      </li>    
