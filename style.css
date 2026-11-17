@@ -374,7 +374,7 @@ ul {
 }
 
 .flipCard {
-    height: 340px;
+    height: 390px;
     perspective: 1200px;
 }
 
@@ -444,9 +444,9 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.6rem;
-    margin: 1rem 0;
-    font-size: 0.88rem;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+    font-size: 0.85rem;
     color: #c9d4de;
 }
 
