@@ -3,204 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jon Clinard's Portfolio</title>
+    <title>Jon Clinard | Application Reliability Engineer</title>
+    <meta name="description" content="Jon Clinard, Application Reliability Engineer at Visa. Deployments, observability, and keeping production healthy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li id="contactModal"><h3>Contact Me</h3></li>
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="navBrand">Jon Clinard</a>
+        <ul class="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><button type="button" class="navContact" id="contactModal">Contact</button></li>
         </ul>
     </nav>
 
-<div class="modal" id ="modal">
-    <div class="modalContent">
-        <div class="xHolder">
-            <h2 id="modalClose" class="closeX">x</h2>
-            </div>
-            <h2 class="sectionHeader">Contact Me:</h2>
-            <div class ="aboutBody">
-                <a href="mailto: jwclinard@gmail.com" target="_blank" class="contactEmail">
-                    Email: jwclinard@gmail.com
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modalContent">
+            <button type="button" id="modalClose" class="closeX" aria-label="Close">&times;</button>
+            <h2 id="modalTitle" class="modalTitle">Let's talk</h2>
+            <p class="modalText">The fastest way to reach me is email or LinkedIn.</p>
+            <div class="contactLinks">
+                <a href="mailto:jwclinard@gmail.com" class="contactLink">
+                    <span class="contactLabel">Email</span>
+                    jwclinard@gmail.com
                 </a>
-                <a href="https://www.linkedin.com/in/jonathan-clinard/" target="blank" class="contactLinkedIn">
-                    LinkedIn: www.linkedin.com/in/jonathan-clinard/
+                <a href="https://www.linkedin.com/in/jonathan-clinard/" target="_blank" rel="noopener" class="contactLink">
+                    <span class="contactLabel">LinkedIn</span>
+                    linkedin.com/in/jonathan-clinard
+                </a>
             </div>
         </div>
     </div>
-</div>
 
-
-
-    <section id="home">
-        <div class="main">
-            <h1 class="headings">Jon Clinard <br> Software Developer</h1>
-            <button class="btn"> <a href="https://docs.google.com/document/d/1Z-g05IU95nUW8d5AvQSijYF__6O2KhQGotfgG2KJ-hw/edit?usp=sharing">Click here to check out my resume!</a> </button>
-
-        </div>
-    </section>
-
-    <section id="about">
-        <h1 class="headings">ABOUT ME</h1>
-
-        <div id="infoContainer">
-            
-            <div id="photoCard">
-                <img src="Portfolio/abme.PNG" alt="">
+    <header id="home" class="hero">
+        <div class="heroContent">
+            <p class="eyebrow">Hi, I'm Jon</p>
+            <h1 class="heroTitle">Application Reliability Engineer</h1>
+            <p class="heroText">I ship releases, watch the dashboards, and keep production healthy at Visa.</p>
+            <div class="heroButtons">
+                <a class="btn btnPrimary" href="https://docs.google.com/document/d/1Z-g05IU95nUW8d5AvQSijYF__6O2KhQGotfgG2KJ-hw/edit?usp=sharing" target="_blank" rel="noopener">View my resume</a>
+                <a class="btn btnGhost" href="#portfolio">See my projects</a>
             </div>
+        </div>
+        <a href="#about" class="scrollHint" aria-label="Scroll to About">&#8595;</a>
+    </header>
 
-            <div id="introCard">
-                <h2 id="cardTitle">Jon Clinard</h2>
-             <p>
-             I'm a recent Full-Stack Bootcamp Grad located in Columbus, Ohio.</br>
-            </br>
-             I've spent most of my life working in the healthcare industry. During the initial COVID-19 quarantine, I took an online course covering Python that really piqued my interest to see where coding could take me. After doing a lot of research I decided on We Can Code It, a bootcamp based in Columbus.</br>
-            </br>
-             When I'm not coding, I love to spend my freetime playing video games, getting a run or lift in, and occasionally touching some grass.</br>
-            </br>
-            Please contact me via my social links below.
-                Thanks for checking out my page!</p>
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <p class="sectionKicker">About</p>
+                <h2 class="sectionTitle">From heart monitors to production dashboards</h2>
+
+                <div class="aboutGrid">
+                    <div class="aboutPhoto">
+                        <img src="Portfolio/abme.PNG" alt="Jon Clinard">
+                    </div>
+
+                    <div class="aboutText">
+                        <p>I'm an Application Reliability Engineer at Visa, based in Wadsworth, Ohio. I keep production applications healthy across Kubernetes, Windows servers, and everything in between.</p>
+                        <p>My path here wasn't a straight line. As a cardiac monitor technician, I watched rhythms for up to 63 patients at a time. As a Quality Manager at Superior Trim, I led a team auditing parts and tracking down nonconforming material. Both jobs taught me what reliability work demands: catch problems early, find the root cause, and stay calm when something breaks.</p>
+                        <p>A Python course during the COVID lockdown got me hooked on code. I finished the We Can Code IT bootcamp in 2022 and joined CardinalCommerce, now part of Visa, that same year.</p>
+                        <p>Off the clock, I'm usually spending time with my dog, playing strategy games, or getting a lift in.</p>
+                    </div>
                 </div>
 
-               
-                <div id="skillsCard"> 
-                    <h2 id =cardTitle>Skills/Technologies</h2>
-                    <p id="skillsContent">
-                        • Java • Spring • Hibernate • JPA • JavaScript  <br>
-                        <br>
-                        • MVC • HTML • CSS • Flexbox • Grid • TDD   <br>
-                    <br>
-                    • Agile (Scrum) • Object-Oriented Programming (OOP)  <br>
-                    <br>
-                    • AJAX • JSON • Restful APIs • Responsive / Mobile Design <br>
-                    <br>
-                    • SQL • Relational Databases • Source Control / Git <br>
-                    <br>
-                    • IntelliJ • Visual Studio Code
-                    </p></div>
+                <div class="skillsGrid">
+                    <div class="skillGroup">
+                        <h3>Reliability &amp; Ops</h3>
+                        <ul class="tags">
+                            <li>Kubernetes</li><li>Docker</li><li>Jenkins</li><li>Ansible</li><li>Terraform</li><li>HashiCorp Vault</li><li>WinRM</li><li>IaaS Provisioning</li>
+                        </ul>
+                    </div>
+                    <div class="skillGroup">
+                        <h3>Observability</h3>
+                        <ul class="tags">
+                            <li>Splunk</li><li>Grafana</li><li>Kibana</li><li>OpenTelemetry</li><li>Riverbed</li>
+                        </ul>
+                    </div>
+                    <div class="skillGroup">
+                        <h3>Testing</h3>
+                        <ul class="tags">
+                            <li>JMeter</li><li>Postman</li><li>Songbird</li><li>Production Release Validation</li>
+                        </ul>
+                    </div>
+                    <div class="skillGroup">
+                        <h3>Development</h3>
+                        <ul class="tags">
+                            <li>Java</li><li>Spring</li><li>JavaScript</li><li>SQL</li><li>PowerShell</li><li>Python</li><li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="skillGroup">
+                        <h3>AI</h3>
+                        <ul class="tags">
+                            <li>Agentic AI</li><li>MIT Applied Agentic AI Certificate, 2026</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-    </section>
-
-    <section id="portfolio">
-    <div class = "sectionBox">
-        <h3 class = "headings">PORTFOLIO</h3>
-        <div id="instructionHolder">
-            <h5 class="projectInstruction">Click on a card to view my projects on GitHub!</h5>
-        </div>
-        <div class = "cardContainer">
-            <div class = "flipCard">
-                <a href="https://github.com/2022-Spring-Cohort/virtual-pet-clinardjw" target="_blank" class="cardLink">
-                    <div class="flipCardInner">
-                        <div class="flipCardFront">
-                            <h3 class="flipHeader">Virtual Pet</h3>
-                            <img src="Portfolio/img1.png" id="pet" alt="">
-                        </div>
-                        <div class="flipCardBack">
-                            <h3 class="flipHeader">Virtual Pet</h3>
-                            <div class=bulletPoints>
-                                <ul class="ul">
-                                    <li class = "flipCardText">A Java-based pet shelter that allows users to create, interact with, and delete virtual creatures from a digital pet shelter.
-                                    </li><br>
-                                    <li  class = "flipCardText">OOP principles were used to create templates for both robotic and organic pets of different species.
-                                    </li><br>    
-                                    <li class = "flipCardText">This project has gone through multiple iterations, starting off with a single object(pet), and then added functionality to accommodate multiple pets and species. 
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                </a> 
-            </div>
-
-            <div class = "flipCard">
-                <a href="https://github.com/clinardjw/todoApp" target="_blank" class="cardLink">
-                    <div class="flipCardInner">
-                        <div class="flipCardFront">
-                            <h3 class="flipHeader">To-Do App</h3>
-                            <img src="Portfolio/Todo.PNG" id="pet" alt="">
-                        </div>
-                        <div class="flipCardBack">
-                            <h3 class="flipHeader">To-Do App</h3>
-                            <div class=bulletPoints>
-                                <ul class="ul">
-                                    <li class = "flipCardText">A simple task tracker app. Add an outstanding task to the list, mark them as complete as you go, and remove them. 
-                                    </li><br>
-                                    <li  class = "flipCardText">Using vanilla JavaScript to allow the user to interact with the list, functionality enabled by Event Listeners.
-                                    </li><br>
-                                    <li class = "flipCardText">Basic HTML/CSS was used to structure the web app in a simple, yet clean design. 
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                </a> 
-            </div>
-
-            <div class = "flipCard">
-                <a href="https://github.com/2022-Spring-Cohort/album-songs-api-adagio" target="_blank" class="cardLink">
-                    <div class="flipCardInner">
-                        <div class="flipCardFront">
-                            <h3 class="flipHeader">Adagio Album Collection</h3>
-                            <img src="Portfolio/jukebox.png" id= "card_img" alt="">
-                        </div>
-                        <div class="flipCardBack">
-                            <h3 class="flipHeader">Adagio Album Collection</h3>
-                            <div class=bulletPoints>
-                                <ul class="ul">
-                                    <li class = "flipCardText">An album collection that utilizes Spring MVC, creating a fullstack application using Javascript to display albums and songs, as well as individual ratings. Backend mapping allows the user to add, edit or delete songs or albums from the collection.
-                                     </li><br>
-                                    <li  class = "flipCardText"> JSON data used to populate a Java backend, enabling management of all stored album and song objects.
-                                    </li> <br>   
-                                    <li class = "flipCardText">The frontend was made with JavaScript with DOM design principles to create a light and
-                                        dynamic single page application.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a> 
-            </div>   
-
-            <div class = "flipCard">
-                <a href="https://github.com/2022-Spring-Cohort/donut-maker-clinardjw" target="_blank" class="cardLink">
-                    <div class="flipCardInner">
-                        <div class="flipCardFront">
-                            <h3 class="flipHeader">Donut Clicker</h3>
-                            <img src="Portfolio/donut.png" id= "card_img" alt="">
-                        </div>
-                        <div class="flipCardBack">
-                            <h3 class="flipHeader">Donut Clicker</h3>
-                            <div class=bulletPoints>
-                                <ul class="ul">
-                                    <li class = "flipCardText">A cookie clicker-inspired game utilizing Javascript to allow the player to click 
-                                        a button that dynamically increases the score.
-                                        
-                                    </li><br>
-                                    <li  class = "flipCardText">The game also features the ability to increase the base multiplier of donuts gained per click, as well as 
-                                        Auto-Clickers, which will automatically increase the score on a set interval tracked by the game. These funcionalities are enabled by Event Listeners.
-                                     </li>    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </a> 
-            </div>   
         </section>
 
+        <section id="experience" class="section sectionAlt">
+            <div class="container">
+                <p class="sectionKicker">Experience</p>
+                <h2 class="sectionTitle">What I do at Visa</h2>
+
+                <div class="workCard">
+                    <div class="workHeader">
+                        <div>
+                            <h3>Application Reliability Engineer</h3>
+                            <p class="workOrg">Visa (formerly CardinalCommerce)</p>
+                        </div>
+                        <p class="workDates">Aug 2022 to present</p>
+                    </div>
+                    <ul class="workList">
+                        <li>Deploy new application releases to production through a Jenkins pipeline, then validate each one with live testing in JMeter, Postman, and Songbird (Cardinal's 3-D Secure JavaScript library).</li>
+                        <li>Monitor logs and metrics in Splunk, Grafana, and Kibana to confirm every release is healthy and catch issues early.</li>
+                        <li>Scaled out a high-traffic production application by provisioning new VMs through IaaS tooling, roughly doubling instance count, and coordinated firewall onboarding with networking and security teams.</li>
+                        <li>Built a PowerShell tool to clean up stale Tomcat directories across lab, staging, and production servers, with WinRM fan-out and a confirmation gate before remote runs.</li>
+                        <li>Rolled out Riverbed observability with Ansible playbooks and configured OpenTelemetry on the application side.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <div class="container">
+                <p class="sectionKicker">Projects</p>
+                <h2 class="sectionTitle">Things I've built</h2>
+                <p class="sectionLead">Hover over a card for details, and click to view it on GitHub.</p>
+
+                <div class="cardContainer">
+                    <div class="flipCard">
+                        <a href="https://github.com/2022-Spring-Cohort/virtual-pet-clinardjw" target="_blank" rel="noopener" class="cardLink">
+                            <div class="flipCardInner">
+                                <div class="flipCardFront">
+                                    <img src="Portfolio/img1.png" class="cardImg" alt="">
+                                    <h3 class="flipHeader">Virtual Pet</h3>
+                                    <ul class="tags tagsSmall"><li>Java</li><li>OOP</li></ul>
+                                </div>
+                                <div class="flipCardBack">
+                                    <h3 class="flipHeader">Virtual Pet</h3>
+                                    <ul class="cardPoints">
+                                        <li>A Java-based shelter where users create, interact with, and remove virtual pets.</li>
+                                        <li>OOP templates for both robotic and organic pets of different species.</li>
+                                        <li>Grew over several iterations, from a single pet to multiple pets and species.</li>
+                                    </ul>
+                                    <span class="cardCta">View on GitHub &rarr;</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flipCard">
+                        <a href="https://github.com/clinardjw/todoApp" target="_blank" rel="noopener" class="cardLink">
+                            <div class="flipCardInner">
+                                <div class="flipCardFront">
+                                    <img src="Portfolio/Todo.PNG" class="cardImg" alt="">
+                                    <h3 class="flipHeader">To-Do App</h3>
+                                    <ul class="tags tagsSmall"><li>JavaScript</li><li>HTML/CSS</li></ul>
+                                </div>
+                                <div class="flipCardBack">
+                                    <h3 class="flipHeader">To-Do App</h3>
+                                    <ul class="cardPoints">
+                                        <li>A simple task tracker: add tasks, mark them complete, and remove them.</li>
+                                        <li>Vanilla JavaScript with event listeners drives every interaction.</li>
+                                        <li>Basic HTML and CSS keep the design simple and clean.</li>
+                                    </ul>
+                                    <span class="cardCta">View on GitHub &rarr;</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flipCard">
+                        <a href="https://github.com/2022-Spring-Cohort/album-songs-api-adagio" target="_blank" rel="noopener" class="cardLink">
+                            <div class="flipCardInner">
+                                <div class="flipCardFront">
+                                    <img src="Portfolio/jukebox.png" class="cardImg" alt="">
+                                    <h3 class="flipHeader">Adagio Album Collection</h3>
+                                    <ul class="tags tagsSmall"><li>Spring MVC</li><li>JavaScript</li><li>REST</li></ul>
+                                </div>
+                                <div class="flipCardBack">
+                                    <h3 class="flipHeader">Adagio Album Collection</h3>
+                                    <ul class="cardPoints">
+                                        <li>A full-stack Spring MVC app for browsing and rating albums and songs.</li>
+                                        <li>Backend mappings let users add, edit, or delete songs and albums.</li>
+                                        <li>A light, dynamic single-page JavaScript frontend fed by JSON.</li>
+                                    </ul>
+                                    <span class="cardCta">View on GitHub &rarr;</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flipCard">
+                        <a href="https://github.com/2022-Spring-Cohort/donut-maker-clinardjw" target="_blank" rel="noopener" class="cardLink">
+                            <div class="flipCardInner">
+                                <div class="flipCardFront">
+                                    <img src="Portfolio/donut.png" class="cardImg" alt="">
+                                    <h3 class="flipHeader">Donut Clicker</h3>
+                                    <ul class="tags tagsSmall"><li>JavaScript</li><li>DOM</li></ul>
+                                </div>
+                                <div class="flipCardBack">
+                                    <h3 class="flipHeader">Donut Clicker</h3>
+                                    <ul class="cardPoints">
+                                        <li>A cookie clicker-inspired game where every click raises the score.</li>
+                                        <li>Buy multipliers to boost donuts per click, or auto-clickers that score on a timer.</li>
+                                    </ul>
+                                    <span class="cardCta">View on GitHub &rarr;</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="icons">
-            <a href="https://www.linkedin.com/in/jonathan-clinard"> <img src="linkedin.png" height="50px" width="50px" > </a>
-            <a href="https://github.com/clinardjw"> <img src="GitHub-Emblem.png" height="50px" width="50px"> </a>
+            <a href="https://www.linkedin.com/in/jonathan-clinard" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn" width="36" height="36"></a>
+            <a href="https://github.com/clinardjw" target="_blank" rel="noopener" aria-label="GitHub"><img src="GitHub-Emblem.png" alt="GitHub" width="36" height="36"></a>
         </div>
+        <p class="footerText">&copy; <span id="year">2026</span> Jon Clinard</p>
     </footer>
-    <script src="/javascript.js"></script>
+    <script src="javascript.js"></script>
 </body>
 </html>
