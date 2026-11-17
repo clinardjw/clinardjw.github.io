@@ -1,17 +1,40 @@
 const modal = document.getElementById("modal");
-const contact = document.getElementById("contact");
+const contactButton = document.getElementById("contactModal");
 const modalClose = document.getElementById("modalClose");
+const navbar = document.getElementById("navbar");
 
-contactModal.addEventListener("click", ()=>{
-    modal.style.display = 'block';
-})
-
-modalClose.addEventListener("click", ()=>{
-    modal.style.display = "none";
-})
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+function openModal() {
+    modal.classList.add("open");
+    modalClose.focus();
 }
+
+function closeModal() {
+    modal.classList.remove("open");
+    contactButton.focus();
+}
+
+contactButton.addEventListener("click", openModal);
+modalClose.addEventListener("click", closeModal);
+
+// Close when clicking the dimmed backdrop or pressing Escape
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+        closeModal();
+    }
+});
+
+// Give the navbar a solid background once you scroll past the top
+function updateNavbar() {
+    navbar.classList.toggle("scrolled", window.scrollY > 40);
+}
+
+window.addEventListener("scroll", updateNavbar, { passive: true });
+updateNavbar();
+
+document.getElementById("year").textContent = new Date().getFullYear();
